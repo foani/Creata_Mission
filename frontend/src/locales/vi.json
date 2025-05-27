@@ -1,0 +1,127 @@
+{
+  "common": {
+    "loading": "Đang tải...",
+    "error": "Đã xảy ra lỗi",
+    "retry": "Thử lại",
+    "confirm": "Xác nhận",
+    "cancel": "Hủy bỏ",
+    "close": "Đóng",
+    "save": "Lưu",
+    "reset": "Đặt lại",
+    "start": "Bắt đầu",
+    "stop": "Dừng",
+    "pause": "Tạm dừng",
+    "resume": "Tiếp tục",
+    "finish": "Hoàn thành",
+    "score": "Điểm",
+    "rank": "Xếp hạng",
+    "time": "Thời gian",
+    "result": "Kết quả",
+    "tryAgain": "Thử lại"
+  },
+  "games": {
+    "common": {
+      "score": "Điểm",
+      "ranking": "Xếp hạng",
+      "playAgain": "Chơi lại",
+      "loading": "Đang tải...",
+      "error": "Đã xảy ra lỗi",
+      "seconds": "giây",
+      "minutes": "phút"
+    },
+    "cryptoPrediction": {
+      "title": "🚀 Dự đoán giá Crypto",
+      "subtitle": "Dự đoán giá sau 1 phút",
+      "coinSelection": "Chọn Coin",
+      "timerSetting": "Cài đặt Timer", 
+      "currentPrice": "Giá hiện tại",
+      "startPrice": "Giá bắt đầu",
+      "timeRemaining": "Thời gian còn lại",
+      "prediction": {
+        "up": "TĂNG",
+        "down": "GIẢM",
+        "upDescription": "Dự đoán tăng",
+        "downDescription": "Dự đoán giảm",
+        "makePrediction": "Đưa ra dự đoán"
+      },
+      "result": {
+        "win": "Đúng! +{score} điểm",
+        "lose": "Sai. +0 điểm",
+        "waiting": "Đang chờ kết quả...",
+        "priceWent": "Giá đã {direction}",
+        "up": "tăng",
+        "down": "giảm"
+      },
+      "stats": {
+        "totalScore": "Tổng điểm",
+        "streak": "Chuỗi thắng",
+        "accuracy": "Độ chính xác",
+        "totalGames": "Tổng số game",
+        "winRate": "Tỷ lệ thắng"
+      },
+      "instructions": {
+        "selectCoin": "1. Chọn một coin",
+        "selectTimer": "2. Cài đặt timer", 
+        "makePrediction": "3. Dự đoán TĂNG hoặc GIẢM",
+        "waitResult": "4. Chờ kết quả"
+      }
+    },
+    "lazyDerby": {
+      "title": "🐎 Derby Lười",
+      "subtitle": "Chọn con ngựa chậm nhất",
+      "selectHorse": "Chọn ngựa",
+      "horseSpeed": "Tốc độ",
+      "raceStarting": "Cuộc đua bắt đầu!",
+      "raceInProgress": "Đang đua...",
+      "raceFinished": "Cuộc đua kết thúc!",
+      "horses": {
+        "thunder": "Sấm",
+        "lightning": "Chớp", 
+        "storm": "Bão",
+        "wind": "Gió",
+        "breeze": "Vi Phong"
+      },
+      "result": {
+        "winner": "Nhất: {horse}",
+        "lastPlace": "Cuối: {horse}",
+        "yourChoice": "Lựa chọn của bạn: {horse}",
+        "correct": "Đúng! Bạn đã chọn con ngựa chậm nhất!",
+        "incorrect": "Sai. Hãy thử lại!"
+      },
+      "instructions": {
+        "objective": "Mục tiêu: Dự đoán con ngựa chậm nhất (cuối cùng)",
+        "selectSlowest": "⭐ Ít sao hơn = ngựa chậm hơn",
+        "watchRace": "Xem cuộc đua trong 30 giây"
+      }
+    },
+    "reverseDarts": {
+      "title": "🎯 Phi tiêu Ngược",
+      "subtitle": "Sống sót 10 giây bằng cách tránh mũi tên",
+      "controls": {
+        "move": "Di chuyển",
+        "left": "←",
+        "right": "→", 
+        "jump": "Nhảy",
+        "touch": "Chạm màn hình để di chuyển"
+      },
+      "gameStatus": {
+        "ready": "Sẵn sàng!",
+        "start": "Bắt đầu!",
+        "survived": "Sống sót: {time}s",
+        "gameOver": "Game Over!",
+        "success": "Thành công! Sống sót 10 giây!"
+      },
+      "instructions": {
+        "objective": "Sống sót 10 giây bằng cách tránh mũi tên",
+        "controls": "Dùng phím ←/→ hoặc chạm để di chuyển",
+        "jump": "Nhấn spacebar để nhảy",
+        "avoid": "Tránh các mũi tên!"
+      },
+      "result": {
+        "survived": "Sống sót: {time} giây",
+        "perfect": "Hoàn hảo! Sống sót 10 giây!",
+        "failed": "Thất bại... Hãy thử lại!"
+      }
+    }
+  }
+}

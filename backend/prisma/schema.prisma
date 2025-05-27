@@ -1,0 +1,89 @@
+ // CreataChain 기반 텔레그램 미션 게임 데이터베이스 스키마
+ // PostgreSQL 기반, CreataChain Catena 메인넷 연동
+ 
+ generator client {
+   provider = "prisma-client-js"
+ }
+ 
+ datasource db {
+   provider = "postgresql"
+   url      = env("DATABASE_URL")
+ }
+ 
+ // 사용자 테이블 - 지갑 인증 및 텔레그램 연동
+ model User {
+   id                String   @id @default(uuid())
+   walletAddress     String   @unique @map("wallet_address")
+   telegramId        String?  @unique @map("telegram_id")
+   language          String   @default("en") // 다국어 지원: ko, en, vi, ja
+   isWalletVerified  Boolean  @default(false) @map("is_wallet_verified")
+   isWalletInstalled Boolean  @default(false) @map("is_wallet_installed")
+   score             Int      @default(0) // 총 누적 점수
+   lastPlayedAt      DateTime? @map("last_played_at")
+   createdAt         DateTime @default(now()) @map("created_at")
+   updatedAt         DateTime @updatedAt @map("updated_at")
+   
+   // 관계 설정
+   gameLogs     GameLog[]      // 사용자의 게임 기록들
+   airdropQueue AirdropQueue[] // 사용자의 에어드랍 대기열
+   adminUser    AdminUser?     // 관리자 권한 (선택적)
+   
+   @@map("users")
+   @@index([isWalletVerified, isWalletInstalled])
+   }
+ // 게임 로그 테이블 - 모든 게임 참여 기록
+ model GameLog {
+   id        Int      @id @default(autoincrement())
+   userId    String   @map("user_id")
+   gameType  String   @map("game_type") // binary, derby, darts
+   round     Int      // 게임 라운드 번호
+   score     Int      // 해당 라운드에서 획득한 점수
+   result    Json     // 게임 결과 상세 정보 (JSON)
+   createdAt DateTime @default(now()) @map("created_at")
+   playedAt  DateTime @default(now()) @map("played_at") // 게임 플레이 시간
+   
+   // 관계 설정
+   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+   
+   @@map("game_logs")
+   @@index([userId])
+   @@index([gameType])
+ }
+ 
+ // 에어드랍 큐 테이블 - CTA 토큰 보상 관리
+ model AirdropQueue {
+   id          Int      @id @default(autoincrement())
+   userId      String   @map("user_id")
+   rewardType  String   @map("reward_type") // ranking, event, referral
+   ctaAmount   Decimal  @map("cta_amount") @db.Decimal(20, 8) // CTA 토큰 수량
+   txHash      String?  @map("tx_hash") // 트랜잭션 해시 (전송 후 기록)
+   transactionHash String? @map("transaction_hash") // 대체 트랜잭션 해시 필드
+   reason      String?  @default("랭킹 보상") // 에어드랍 이유
+   isManual    Boolean  @default(false) @map("is_manual") // 수동 에어드랍 여부
+   status      String   @default("PENDING") // PENDING, COMPLETED, FAILED
+   createdAt   DateTime @default(now()) @map("created_at")
+   processedAt DateTime? @map("processed_at")
+   
+   // 관계 설정
+   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+   
+   @@map("airdrop_queue")
+   @@index([status])
+   @@index([rewardType])
+ }
+ 
+ // Admin 사용자 관리 테이블
+ model AdminUser {
+     id           String    @id @default(uuid())
+     userId       String    @unique @map("user_id") // User 테이블과 연결 (1:1 관계)
+     email        String    @unique
+     passwordHash String    @map("password_hash")
+     role         String    @default("admin") // admin, editor, viewer
+     lastLogin    DateTime? @map("last_login")
+     createdAt    DateTime  @default(now()) @map("created_at")
+     
+     // 관계 설정
+     user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+     
+     @@map("admin_users")
+ }

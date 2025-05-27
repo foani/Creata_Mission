@@ -1,0 +1,136 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "close": "Close",
+    "save": "Save",
+    "reset": "Reset",
+    "start": "Start",
+    "stop": "Stop",
+    "pause": "Pause",
+    "resume": "Resume",
+    "finish": "Finish",
+    "score": "Score",
+    "rank": "Rank",
+    "time": "Time",
+    "result": "Result",
+    "tryAgain": "Try Again"
+  },
+  "games": {
+    "common": {
+      "score": "Score",
+      "ranking": "Ranking",
+      "playAgain": "Play Again",
+      "loading": "Loading...",
+      "error": "An error occurred",
+      "seconds": "seconds",
+      "minutes": "minutes"
+    },
+    "cryptoPrediction": {
+      "title": "🚀 Crypto Price Prediction",
+      "subtitle": "Predict the price after 1 minute",
+      "coinSelection": "Select Coin",
+      "timerSetting": "Timer Setting", 
+      "currentPrice": "Current Price",
+      "startPrice": "Start Price",
+      "timeRemaining": "Time Remaining",
+      "prediction": {
+        "up": "UP",
+        "down": "DOWN",
+        "upDescription": "Predict Rise",
+        "downDescription": "Predict Fall",
+        "makePrediction": "Make Prediction"
+      },
+      "result": {
+        "win": "Correct! +{score} points",
+        "lose": "Incorrect. +0 points",
+        "waiting": "Waiting for result...",
+        "priceWent": "Price went {direction}",
+        "up": "UP",
+        "down": "DOWN"
+      },
+      "stats": {
+        "totalScore": "Total Score",
+        "streak": "Streak",
+        "accuracy": "Accuracy",
+        "totalGames": "Total Games",
+        "winRate": "Win Rate"
+      },
+      "instructions": {
+        "selectCoin": "1. Select a coin",
+        "selectTimer": "2. Set the timer", 
+        "makePrediction": "3. Predict UP or DOWN",
+        "waitResult": "4. Wait for the result"
+      }
+    },
+    "lazyDerby": {
+      "title": "🐎 Lazy Derby",
+      "subtitle": "Pick the slowest horse",
+      "selectHorse": "Select Horse",
+      "horseSpeed": "Speed",
+      "raceStarting": "Race Starting!",
+      "raceInProgress": "Race in Progress...",
+      "raceFinished": "Race Finished!",
+      "horses": {
+        "thunder": "Thunder",
+        "lightning": "Lightning", 
+        "storm": "Storm",
+        "wind": "Wind",
+        "breeze": "Breeze"
+      },
+      "result": {
+        "winner": "1st Place: {horse}",
+        "lastPlace": "Last Place: {horse}",
+        "yourChoice": "Your Choice: {horse}",
+        "correct": "Correct! You picked the slowest horse!",
+        "incorrect": "Incorrect. Try again!"
+      },
+      "instructions": {
+        "objective": "Objective: Predict the slowest horse (last place)",
+        "selectSlowest": "⭐ Fewer stars = slower horse",
+        "watchRace": "Watch the race for 30 seconds"
+      }
+    },
+    "reverseDarts": {
+      "title": "🎯 Reverse Darts",
+      "subtitle": "Survive 10 seconds by dodging arrows",
+      "controls": {
+        "move": "Move",
+        "left": "←",
+        "right": "→", 
+        "jump": "Jump",
+        "touch": "Touch screen to move"
+      },
+      "gameStatus": {
+        "ready": "Ready!",
+        "start": "Start!",
+        "survived": "Survived: {time}s",
+        "gameOver": "Game Over!",
+        "success": "Success! Survived 10 seconds!"
+      },
+      "instructions": {
+        "objective": "Survive 10 seconds by dodging arrows",
+        "controls": "Use ←/→ keys or touch to move",
+        "jump": "Press spacebar to jump",
+        "avoid": "Avoid the arrows!"
+      },
+      "result": {
+        "survived": "Survived: {time} seconds",
+        "perfect": "Perfect! Survived 10 seconds!",
+        "failed": "Failed... Try again!"
+      },
+      "victory": "Victory!",
+      "gameOver": "Game Over",
+      "finalScore": "Final Score",
+      "paused": "Paused",
+      "howToPlay": "How to Play",
+      "instruction1": "Move your character with mouse or touch",
+      "instruction2": "Dodge the incoming arrows",
+      "instruction3": "Collect power-ups for help",
+      "instruction4": "Survive for 15 seconds to win"
+    }
+  }
+}
